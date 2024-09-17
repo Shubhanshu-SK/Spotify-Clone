@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --black_bg: #121212;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container flex">
+        <div class="left border flex column-flex ">
+            <div class="first_container  border">
+                <div class="flex space-between">
+
+                    <a href="/">
+                        <div class="logo">
+                            <img id="logo_img" src="svg/logo.svg" alt="Spotify">
+                        </div>
+                    </a>
+                    <span class="cross_left">
+                        <img class="svg_img" src="svg/cross.svg " alt="">
+                    </span>
+                </div>
+                <ul>
+                    <li class="home">
+                        <div class="contain_link">
+                            <a class="flex justify-content" href="/">
+                                <img class="svg_img" src="svg/home.svg" alt="">
+                                <span>Home</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contain_link">
+                            <a class="flex justify-content" href="#">
+                                <img class="svg_img" src="svg/search.svg" alt="">
+                                <span>
+                                    Search
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="second_container border">
+                <div>
+
+                    <div class="librury flex space-between items-center">
+
+
+                        <button class="open_librury_bt" onclick="song_visibility()">
+                            <div class=" flex items-center gap librury_button_div">
+
+                                <img class="svg_img" src="svg/library.svg" alt="">
+                                <span>Your Librury</span>
+                            </div>
+                        </button>
+
+                        <span class="plus_svg ">
+                            <a href="#">
+                                <img class="svg_img plus" src="svg/plus.svg" alt="">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <section id="sec_cont_scroll_box">
+                    <div class="scroll_box ">
+
+                        <div id="box_in_scroll_1" class="box_in_scroll border">
+                            <div class="div_in_box">
+                                <article>
+                                    Create your first playlist
+                                </article>
+                                <article>
+                                    it's easy, we'll help you
+                                </article>
+                                <button class="circle_button" type="button">
+                                    <span>
+                                        Create playlist
+
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="box_in_scroll_2" class="box_in_scroll border">
+                            <div class="div_in_box">
+                                <article>
+                                    Let's find some podcasts to follow
+                                </article>
+                                <article>
+                                    we'll keep you updated on episodes
+                                </article>
+                                <button class="circle_button" type="button">
+                                    <span>
+                                        Browse podcasts
+
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+                        <section id="song_in_your_lib" class="lib_songs">
+                            <!-- it will contain all the songs fetched from song folder using javascript -->
+                            <ul class="your_lib_song_ul">
+
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+                <section class="last_sect_of_left">
+                    <div class="end_div_of_left ">
+                        <div>
+                            <a href="#">
+                                <span>
+                                    Legal
+                                </span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <span>
+                                    Safety & Privacy Policy
+                                </span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <span>
+                                    Cookies
+                                </span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <span>
+                                    Abouts Ads
+                                </span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <span>
+                                    Accessibility
+                                </span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <span>
+                                    Cookies
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="language_button flex items-center gap circle_button">
+                        <img class="svg_img" src="svg/language.svg" alt="">
+                        <span>
+                            English
+                        </span>
+                    </button>
+                </section>
+            </div>
+        </div>
+        <div class="right border ">
+            <section class="navbar">
+
+                <div class="nav flex items-center space-between">
+
+                    <div class="undo__redo hamburger">
+                        <button class="hamburger_bt " onclick="view_left()">
+                            <img class="svg_img" src="svg/hamburger.svg" alt="">
+                        </button>
+
+                        <button class="undo">
+
+                            <svg class="left_svg " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24" color="#000000" fill="none">
+                                <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="redo">
+                            <svg class="right_svg " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24" color="#000000" fill="none">
+                                <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="nav_buttons">
+
+                        <button class="sign_up circle_button">
+                            <span>Sign up</span>
+                        </button>
+                        <button class="log_in circle_button">
+                            <span>Log in</span>
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+            <section class="after_nav ">
+                <div class="playlist_link flex space-between">
+                    <a href="#">
+                        <span>
+                            Spotify Playlists
+                        </span>
+
+                    </a>
+                    <a href="#">
+
+                        <span>
+                            Show all
+                        </span>
+                    </a>
+
+                </div>
+                <section class="playlists ">
+                    <div class="spotify_playlist flex ">
+
+                        <!-- cards are created using javascript  -->
+                        
+                    </div>
+                </section>
+            </section>
+            <section class="play_bar">
+                <div class="audio_comp_line">
+                    <div class="song_time_line_bar"></div>
+                    <div class="seekBall"></div>
+                </div>
+                <div class="cont_play_bar_bt ">
+
+                    <div class="song_in_play_bar">
+
+                    </div>
+                    <div>
+
+                        <button class="preview_bt" onclick="previous_bt()">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                    height="24" color="#000000" fill="none">
+                                    <path
+                                        d="M8.06492 12.6258C8.31931 13.8374 9.67295 14.7077 12.3802 16.4481C15.3247 18.3411 16.797 19.2876 17.9895 18.9229C18.3934 18.7994 18.7654 18.5823 19.0777 18.2876C20 17.4178 20 15.6118 20 12C20 8.38816 20 6.58224 19.0777 5.71235C18.7654 5.41773 18.3934 5.20057 17.9895 5.07707C16.797 4.71243 15.3247 5.6589 12.3802 7.55186C9.67295 9.29233 8.31931 10.1626 8.06492 11.3742C7.97836 11.7865 7.97836 12.2135 8.06492 12.6258Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M4 4L4 20" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <button class="play_bt" onclick="play_bt()">
+                            <span>
+                                <img src="svg/pause.svg" alt="">
+                            </span>
+                        </button>
+                        <button class="next_bt" onclick="next_bt()">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                    height="24" color="#000000" fill="none">
+                                    <path
+                                        d="M15.9351 12.6258C15.6807 13.8374 14.327 14.7077 11.6198 16.4481C8.67528 18.3411 7.20303 19.2876 6.01052 18.9229C5.60662 18.7994 5.23463 18.5823 4.92227 18.2876C4 17.4178 4 15.6118 4 12C4 8.38816 4 6.58224 4.92227 5.71235C5.23463 5.41773 5.60662 5.20057 6.01052 5.07707C7.20304 4.71243 8.67528 5.6589 11.6198 7.55186C14.327 9.29233 15.6807 10.1626 15.9351 11.3742C16.0216 11.7865 16.0216 12.2135 15.9351 12.6258Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M20 5V19" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="current_time time_duration">
+                        0:00/0:00
+                    </div>
+                    <div class="sound_act flex items-center">
+
+                        <img class="sound_img" src="svg/sound.svg" alt="" style="cursor: pointer;">
+
+                        <input type="range" name="sound_range" id="sound_range" style="height: 5px; cursor: pointer;">
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <div class="bottom_fixed_div flex items-center space-between">
+        <div>
+            <div>
+                preview of spotify
+            </div>
+            <div>
+                Sign up to get unlimeted songs and podcasts with occasional ads. No credit card
+            </div>
+        </div>
+        <div>
+            <button class="sign_up_button border circle_button">
+                <span>
+                    Sign up for free
+                </span>
+            </button>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
