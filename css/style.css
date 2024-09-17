@@ -1,0 +1,318 @@
+
+
+.svg_img{
+    /* height: 20px; */
+    width: 1.4em;
+    filter: invert(1);
+}
+.contain_link a{
+    gap: 20px;
+    font-size:1em;
+    font-weight: bold;
+}
+.contain_link{
+    padding: 10px 12px;
+    /* margin: 15px 0px; */
+}
+.logo{
+    padding: 0 24px;
+    padding-top: 20px;
+}
+.librury{
+    margin: 10px 15px;
+    padding: 0 10px;
+    font-size: 1em;
+}
+.first_container,.second_container,.right{
+    background: var(--black_bg);
+}
+.second_container{
+    min-height: 30rem;
+}
+/* for responsiveness of big screen */
+@media only screen and (min-height: 1050px) {
+    .second_container{
+        min-height: 62rem;
+    }
+}
+
+#logo_img{
+    width: 5rem;
+    filter: invert(1);
+}
+.librury_button_div{
+    font-size: 1rem;   
+}
+.scroll_box{
+    background: var(--black_bg);
+    margin: auto;
+    padding: 8px;
+    height: 200px;
+    width: auto;
+    overflow-y:auto;
+    scrollbar-width: none;
+
+}
+.scroll_box >.box_in_scroll{
+    background: #333;
+    height: auto;
+    margin-bottom:20px ;
+    position: relative;
+    /* for your librury */
+    
+}
+.second_container section:last-child{
+    height: fit-content;
+}
+.box_in_scroll .div_in_box{
+    /* display: none; */
+    /* visibility: hidden; */
+    padding: 20px;
+    user-select: none;
+    
+}
+.div_in_box article:first-of-type{
+    font: 13px;
+    font-weight: 500;
+}
+.div_in_box article:last-of-type{
+    font-size:small;
+    padding-top: 10px;
+}
+.div_in_box button{
+    font-size:small;
+    filter: invert(1);
+    font-weight: 400;
+    margin-top: 15px;
+    line-height: 100%;
+}
+.end_div_of_left{
+    font-size: small;
+    font-weight: 200;
+    display: flex;
+    padding: 2px 30px 20px 30px;
+    flex-wrap: wrap;
+}
+.end_div_of_left div{
+    padding-right: 30px;
+    padding-bottom: 7px;
+}
+.language_button{
+    margin: 0 0 0 30px;
+    border:1px solid white;
+    
+}
+/* for responsiveness of small screen  */
+@media only screen and (max-width: 1050px) {
+    .end_div_of_left div{
+        padding-right: 10px;
+        padding-bottom: 7px;
+    }
+    .end_div_of_left{
+        font-size: 10px;
+        font-weight: 300;
+    }
+    .bottom_fixed_div{
+        width: 90vw;
+    }
+    .language_button{
+        position: relative;
+        bottom:10px;
+    }
+    body{
+        overflow-x: hidden
+    };
+    .right{
+        height: 82.5vh;
+    }
+}
+.bottom_fixed_div{
+    /* position: end; */
+    width: 95.5%;
+    height: 45px;
+    /* margin: 0 7px; */
+    margin:auto;
+    background: var(--black_bg);
+    padding: 20px;
+    background-image: linear-gradient(to right, rgb(187, 101, 116), rgb(167, 86, 167),rgb(41, 184, 231));
+    
+}
+.bottom_fixed_div div div{
+    position: relative;
+}
+.sign_up_button{
+    border:1px solid white;
+    filter: invert(1);
+    text-wrap: nowrap;
+    height:50px ;
+    font-size: 15px;
+    font-weight: 400;
+}
+.nav{
+    margin: 0 12px;
+    box-sizing: border-box;
+    padding: 2px 20px;
+    position:absolute;
+    width: 69.5%;
+    background: var(--black_bg);
+    z-index: 2;
+    
+    /* display: flex;
+    justify-content: space-between; */
+}
+.nav_buttons{
+    margin-right: 40px;
+}
+.nav_buttons span{
+    font-size: 1.2em;
+}
+.hamburger_bt {
+    display: none;
+}
+.nav_buttons>.sign_up{
+    font-weight: 500;
+    color: gray;
+    position: relative;
+}
+.log_in{
+    filter: invert(1);
+    position: relative;
+    font-weight: 400;
+}
+
+.left_svg,.right_svg{
+    background: #000;
+    border-radius: 40px;
+    padding: 8px;
+}
+
+.after_nav{
+    background-color: transparent;
+    width: 94%;
+    max-height: 100%;
+    position: relative;
+    overflow: auto;
+    top: 8%;
+    padding: 40px 15px 0px 15px;
+    /* overflow: scroll; */
+}
+.playlist_link{
+    padding: 10px;
+    font-size: 0.8em;
+    
+}
+.playlist_link a:first-child {
+    font-weight: 800;
+    font-size: 1.5rem;
+
+}
+.playlist_link a:hover{
+    text-decoration: underline;
+}
+.playlists .card_container{
+    /* border: 2px solid white; */
+    width: 10rem;
+    height: 220px;
+    padding:10px;
+    min-width: 5rem;
+    position: relative;
+    cursor: pointer;
+    
+}
+.card_container:hover{
+    background: rgb(31, 29, 29);
+
+}
+.contain_card_img img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.contain_about_card .card_title{
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.contain_about_card .about_card{
+    font-size: 12px;
+    display: block;
+    height: 32px;
+    overflow: hidden;
+}
+
+.contain_about_card{
+    line-height: 15px;    
+}
+
+.spotify_playlist{
+    display: flex;
+    /* flex: 1 1 auto; */
+    flex-wrap: wrap;
+    height: 61vh;
+    overflow: scroll;
+    /* height: 250px; */
+    /* overflow: hidden; */
+}
+
+.play_button_ani{
+    position: absolute;
+    bottom: 10%;
+    right: 25%;
+    visibility: hidden;
+}
+.play_button_ani svg{
+    /* fill: green; */
+    width: 200%;
+    height: 44px;
+}
+.card_container:hover .play_button_ani{
+    visibility: visible;
+    bottom: 30%;
+    transition: all ease-in 0.2s;
+    /* transition: visibility ease-in 0.15s; */
+}
+.play_bar{
+    position: sticky;
+    /* z-index: 3; */
+    margin: auto;
+    width: 98%;
+    height: 3em;
+    /* border-radius: 10px; */
+    background: var(--black_bg);
+    /* filter: blur(1.1rem); */
+    /* opacity: 1; */
+    bottom: 0;
+    /* z-index: 2; */
+}
+
+.play_bar .cont_play_bar_bt{
+    position: sticky;
+    /* background: blue; */
+    padding: 5px 10px;
+    /* height: fit-content; */
+    display: flex;
+    /* align-items: space-between; */
+    justify-content: space-between;
+    align-items: center;
+
+}
+.cont_play_bar_bt button{
+    height: 80%;
+    padding: 0 5px;
+    background: inherit;
+}
+.cont_play_bar_bt button svg{
+    fill: rgb(44, 37, 37);
+}
+.cont_play_bar_bt > span{
+    /* background: red; */
+    width: 20%;
+    
+    font-size: small;
+    line-height: 1em;
+    text-align: center ;
+    align-content: center;
+    word-wrap:break-word;
+    height: 2.4em;
+    overflow-y: hidden;
+}
+
