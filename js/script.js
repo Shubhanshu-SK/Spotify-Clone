@@ -23,7 +23,7 @@ function song_visibility() {
 }
 
 async function getsongs(folder = "/") {
-    let a = await fetch(`http://127.0.0.1:3000/songs${folder}`);
+    let a = await fetch(`/songs${folder}`);
     let response = await a.text();
     // console.log(response)
     let div = document.createElement("div")
@@ -73,7 +73,7 @@ const playMusic = async (song_name, pause = false) => {
 
 // display all the folder 
 async function display_albums() {
-    let a = await fetch(`http://127.0.0.1:3000/songs/`);
+    let a = await fetch(`/songs/`);
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response
@@ -86,7 +86,7 @@ async function display_albums() {
         if (e.href.includes("/songs")) {
             let folder = e.href.split("/songs")[1]
             //   Get metadata of all folder
-            let a = await fetch(`http://127.0.0.1:3000/songs${folder}info.json`);
+            let a = await fetch(`/songs${folder}info.json`);
             let response = await a.json();
             // console.log(response.description)
             spotify_playlist = document.querySelector(".spotify_playlist")
